@@ -16,3 +16,9 @@ The example:
 
 - `start.sh` - Script to start a local testnet and run the example
 - `draft_proposal.json` - The governance proposal to whitelist an address (following [this example](https://www.mintscan.io/osmosis/proposals/913))
+
+## Execution
+
+```bash
+./start.sh test-chain-id ./data 26657 26656 6060 9090
+```

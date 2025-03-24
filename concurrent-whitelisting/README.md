@@ -21,3 +21,9 @@ The test:
 - `draft_proposal_2.json` - Second proposal to whitelist address 2
 - `draft_metadata.json` - Metadata for first proposal
 - `draft_metadata_2.json` - Metadata for second proposal
+
+## Execution
+
+```bash
+./start.sh test-chain-id ./data 26657 26656 6060 9090
+```
