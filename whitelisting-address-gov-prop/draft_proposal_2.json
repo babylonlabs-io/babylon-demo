@@ -1,0 +1,16 @@
+{
+    "messages": [
+        {
+            "@type": "/cosmwasm.wasm.v1.MsgAddCodeUploadParamsAddresses",
+            "authority": "bbn10d07y265gmmuvt4z0w9aw880jnsr700jduz5f2",
+            "addresses": [
+                "bbn12zdv9q09m5lwcveg2uzmdz239x7a3fgsd9dpuu"
+            ]
+        }
+    ],
+    "metadata": "ipfs://CID",
+    "deposit": "10000bbn",
+    "title": "Whitelisting Address 2",
+    "summary": "Whitelisting Address 2",
+    "expedited": false
+}
