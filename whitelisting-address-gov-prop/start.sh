@@ -103,6 +103,9 @@ if [ $platform = 'linux' ]; then
     sed -i 's/"voting_period": "172800s"/"voting_period": "20s"/g' $CHAINDIR/$CHAINID/node0/$BINARY/config/genesis.json
     sed -i 's/"expedited_voting_period": "86400s"/"expedited_voting_period": "10s"/g' $CHAINDIR/$CHAINID/node0/$BINARY/config/genesis.json
     sed -i 's/"secret"/"mnemonic"/g' $CHAINDIR/$CHAINID/key_seed.json
+    # permissioned wasm integration
+    sed -i 's/"permission": "Everybody"/"permission": "AnyOfAddresses"/g' $CHAINDIR/$CHAINID/node0/$BINARY/config/genesis.json
+    sed -i 's/"addresses": \[\]/"addresses": \["bbn10d07y265gmmuvt4z0w9aw880jnsr700jduz5f2"\]/g' $CHAINDIR/$CHAINID/node0/$BINARY/config/genesis.json
 else
     sed -i '' 's#"tcp://0.0.0.0:26657"#"tcp://0.0.0.0:'"$RPCPORT"'"#g' $CHAINDIR/$CHAINID/node0/$BINARY/config/config.toml
     sed -i '' 's#"tcp://0.0.0.0:26656"#"tcp://0.0.0.0:'"$P2PPORT"'"#g' $CHAINDIR/$CHAINID/node0/$BINARY/config/config.toml
@@ -114,6 +117,9 @@ else
     sed -i '' 's/"voting_period": "172800s"/"voting_period": "20s"/g' $CHAINDIR/$CHAINID/node0/$BINARY/config/genesis.json
     sed -i '' 's/"expedited_voting_period": "86400s"/"expedited_voting_period": "10s"/g' $CHAINDIR/$CHAINID/node0/$BINARY/config/genesis.json
     sed -i '' 's/"secret"/"mnemonic"/g' $CHAINDIR/$CHAINID/key_seed.json
+    # permissioned wasm integration
+    sed -i '' 's/"permission": "Everybody"/"permission": "AnyOfAddresses"/g' $CHAINDIR/$CHAINID/node0/$BINARY/config/genesis.json
+    sed -i '' 's/"addresses": \[\]/"addresses": \["bbn10d07y265gmmuvt4z0w9aw880jnsr700jduz5f2"\]/g' $CHAINDIR/$CHAINID/node0/$BINARY/config/genesis.json
 fi
 
 # Start the node
