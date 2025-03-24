@@ -160,9 +160,6 @@ while true; do
     fi
 done
 
-# Check
-while true; do
-    wasm_params=$(babylond query wasm params --node tcp://$RPC_ENDPOINT -o json)
-    echo "The wasm params after gov prop is $wasm_params"
-    sleep 5
-done
+# Check the wasm params after the proposal
+wasm_params=$(babylond query wasm params --node tcp://$RPC_ENDPOINT -o json)
+echo "The wasm params after gov prop is $wasm_params"
